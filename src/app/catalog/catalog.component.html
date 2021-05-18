@@ -1,0 +1,7 @@
+<div class="container">
+  <br><h3>{{ firstRail ? heading?.rail1 : heading?.rail2 }}</h3>
+
+  <carousel [cellsToShow]="cellShow" [arrowsTheme]="theme" [height]="160">
+      <div class="carousel-cell" *ngFor="let image of images" [ngStyle]="{ 'background-image':'url(' + image?.path + ')' }"></div>
+  </carousel>
+</div>

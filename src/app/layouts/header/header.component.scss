@@ -1,0 +1,75 @@
+@import '../../../styles.scss';
+
+.logo {
+  img {
+    width: 75px;
+  }
+}
+
+.navbar {
+  padding-left: 3%;
+  background-color: $primary-blue;
+}
+
+.navbar-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-icon {
+  position: relative;
+  top: 6px;
+  right: -32px;
+  font-size: inherit;
+  color : $primary-grey;
+}
+
+.input-field {
+  font-weight: $light;
+  padding: 7px;
+  padding-left: 28px;
+  font-size: $font15;
+  color: $primary-grey;
+  background-color: $primary-blue;
+  border: 1px solid $secondary-grey;
+
+  @media only screen and (max-width: $tab_width) {
+    width: 120px;
+  }
+
+  @media only screen and (max-width: $mobile_width) {
+    width: 140px;
+  }
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.profile-btn {
+  color: $primary-grey;
+  background: $primary-blue;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 45px;
+  }
+
+  .pro-img {
+    height: 35px;
+    width: 34px;
+    @include background-contain-no-repeat();
+    background-image: url('https://cdn.iconscout.com/icon/premium/png-256-thumb/profile-1506810-1278719.png');
+  }
+
+  span {
+    line-height: 14px;
+    font-size: $font14;
+    padding: 1px 4px 1px 4px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+  }
+  margin-left: 15px;
+  margin-right: 30px;
+}

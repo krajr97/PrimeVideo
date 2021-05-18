@@ -1,0 +1,41 @@
+<carousel
+    style="z-index: 0;"
+    [arrowsTheme]="theme"
+    [objectFit]="'cover'"
+    width="100vw"
+    [cellWidth]="'100%'"
+    height="300"
+    [autoplayInterval]="2500"
+    [arrowsOutside]="false"
+    [dots]="true"
+    [loop]="true"
+    [cellsToShow]="1"
+    >
+  <div *ngFor="let slide of bannerImages" class="carousel-cell" [ngStyle]="{ 'background-image':'linear-gradient(to right, rgba(15,23,30,1) 60%, rgba(255,101,80,0)), url(' + slide + ')' }">
+    <div class="slider-textbox">
+      <div class="heading">
+        <p>Avengers</p>
+      </div>
+      <div class="sub-heading">
+        <p>
+          Marvel's The Avengers (classified under the name Marvel Avengers Assemble in the United Kingdom and Ireland), or simply The Avengers, is a 2012 American superhero film based on the Marvel Comics superhero team of the same name.
+        </p>
+      </div>
+      <div class="action">
+        <button mat-button>
+          <mat-icon>play_arrow</mat-icon> Play Now
+        </button>
+        <button class="watch" mat-button>
+          <mat-icon>add</mat-icon> Watchlist
+        </button>
+        <button class="detail" mat-button>
+          Details
+        </button>
+      </div>
+    </div>
+  </div>
+</carousel>
+
+<app-catalog [innerWidth]="innerWidth" [firstRail]="true" [heading]="heading"></app-catalog>
+<br>
+<app-catalog [innerWidth]="innerWidth" [firstRail]="false" [heading]="heading"></app-catalog>

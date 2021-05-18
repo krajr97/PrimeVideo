@@ -1,0 +1,34 @@
+<mat-toolbar class="navbar">
+  <span class="logo">
+    <img [src]="logoSrc" />
+  </span>
+  <div class="menus" *ngIf="menuFlag">
+    <a
+      *ngFor="let item of menu"
+      mat-button
+      class="menu-item"
+      [href]="item?.url"
+      target="_blank"
+      >{{ item?.id | titlecase }}</a
+    >
+  </div>
+
+  <a *ngIf="!menuFlag" mat-button class="menu-item" [matMenuTriggerFor]="menu">Menu</a>
+  <mat-menu *ngIf="!menuFlag" #menu="matMenu">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Tv Shows</button>
+    <button mat-menu-item>Movies</button>
+    <button mat-menu-item>Kid's Section</button>
+  </mat-menu>
+
+  <span *ngIf="menuFlag" class="navbar-spacer"></span>
+   <div>
+    <mat-icon>search</mat-icon>
+    <input class="input-field" type="search" placeholder="Search" />
+   </div>
+
+  <button class="profile-btn">
+    <span class="pro-img"></span>
+    <span *ngIf="menuFlag">Profile</span>
+  </button>
+</mat-toolbar>

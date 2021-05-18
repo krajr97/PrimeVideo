@@ -1,0 +1,11 @@
+.menu-item {
+  color: $primary-grey;
+}
+
+.menu-item:hover, .menu-item.active {
+  color: $primary-white;
+  .mat-button-wrapper {
+    border-bottom: 1px solid $primary-white;
+    padding-bottom: 5px;
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../../assets/sass/main.scss';
+
+// .carousel-cell {
+//     display: block;
+//     @include background-center-x();
+//     @include background-cover-no-repeat();
+// }
+
+.slider-textbox {
+  margin-left: 4%;
+  @include setWidth(auto);
+  @include flex-column();
+  color: $primary-white;
+
+  .heading {
+    font-weight: $light;
+    font-size: $font28;
+  }
+
+  @media only screen and (max-width: $tab_width) {
+    @include setWidth($tab_width);
+  }
+  @media only screen and (max-width: $mobile_width) {
+    @include setWidth($mobile_width);
+  }
+}
+
+.action {
+  .mat-button {
+    background-color:  $light-blue;
+    padding: 2px 12px 2px 6px;
+    margin-right: 7px;
+  }
+
+  .watch {
+    background-color: $secondary-blue;
+    border: 1px solid $primary-grey;
+    padding-left: 15px;
+  }
+
+  .detail {
+    background-color: $secondary-blue;
+    border: 1px solid $primary-grey;
+    padding-left: 13px;
+  }
+}

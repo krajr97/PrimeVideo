@@ -1,0 +1,19 @@
+@import '../../styles.scss';
+
+.container {
+  padding-left: 4%;
+  background-color: $secondary-blue;
+  color: $primary-white;
+
+  h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .carousel-cell {
+    width: 250px;
+    @include background-center-x();
+    @include background-cover-no-repeat();
+    border-radius: 5px;
+  }
+}

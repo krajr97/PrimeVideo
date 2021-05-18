@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'amazon';
+
+  public innerWidth: any;
+  public $innerWidth;
+
+  ngOnInit() {
+    this.$innerWidth = new BehaviorSubject(window.innerWidth);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+  this.innerWidth = window.innerWidth;
+  this.$innerWidth.next(this.innerWidth);
+}
+
 }

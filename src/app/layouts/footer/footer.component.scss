@@ -1,0 +1,6 @@
+@import '../../../styles.scss';
+
+.wrapper {
+  width: 100%;
+  @include flex-center-space-between();
+}

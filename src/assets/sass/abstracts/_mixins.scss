@@ -1,0 +1,66 @@
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row() {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-center-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-space-between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-center-space-between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin flex-start() {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+}
+
+@mixin flex-end() {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+@mixin background-center-x() {
+  background-position-x: center;
+}
+
+@mixin background-contain-no-repeat() {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin background-cover-no-repeat() {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin setWidth($width) {
+    @if $width == $tab_width {
+      margin-top: 2.5%;
+      width: 40vw;
+    } @else if $width == $mobile_width {
+      margin-top: 11.5%;
+      width: 88vw;
+    } @else {
+      margin-top: 2.5%;
+      width: 30vw;
+    }
+}
